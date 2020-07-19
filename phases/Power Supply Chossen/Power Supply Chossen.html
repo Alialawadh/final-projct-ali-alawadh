@@ -1,0 +1,136 @@
+<html>
+  <head>
+    <title>Choose a Power Supply - كمبيوترك</title>
+    <link
+      rel="stylesheet"
+      href="../Power Supply Chossen/Power Supply Chossen.css"
+    />
+    <link rel="stylesheet" href="../CpucoolerChossen/CpucoolerChossen.css" />
+  </head>
+  <body onload="myFunction()" style="margin: 0;">
+    <div id="loader"></div>
+    <div style="display: none;" id="myDiv" class="animate-bottom">
+      <div class="header1">
+        <p align="center" class="par22">
+          Chosse a Power Supply / اختر مزود الطاقه
+        </p>
+      </div>
+
+      <div class="headerNamesOfCom">
+        <p id="nameOfCpu">
+          Name/الاسم
+        </p>
+
+        <p id="Core">
+          Wattage/الواط
+        </p>
+
+        <p class="selction">
+          Color
+        </p>
+
+        <p class="price">
+          Price/السعر
+        </p>
+      </div>
+
+      <hr />
+      <div id="willHide1">
+      <div class="bg">
+        <div class="nameOfPart">
+          <a href="" id="PowerName">
+            <img
+              src="https://images-na.ssl-images-amazon.com/images/I/41XLka8BchL.jpg"
+              class="cpuPhoto"
+            />
+            Cooler Master MWE Gold
+          </a>
+          <a
+            href="../Seystem Bulider.html"
+            id="cpu"
+            class="cpu2"
+            onclick="AddPower(document.getElementById('PowerName').innerHTML, document.getElementById('PowerPrice').innerHTML)"
+          >
+            + اضافة/add
+          </a>
+        </div>
+
+        <div class="bigDiv">
+          <div>
+            <p id="coreCount">650 W</p>
+          </div>
+
+          <div>
+            <p id="boostClock">black</p>
+          </div>
+
+          <div class="flexx" id="flexxx">
+            <div class="symbolEu">$</div>
+            <p class="cpuPrice" id="PowerPrice">120</p>
+          </div>
+        </div>
+      </div>
+      <hr />
+    </div>
+    <div id="willHide2">
+      <div class="bg">
+        <div class="nameOfPart">
+          <a href="" id="PowerName2">
+            <img
+              src="https://cdn.pcpartpicker.com/static/forever/images/product/78afeb3cab692533f7fad2eba2975750.256p.jpg"
+              class="cpuPhoto"
+            />
+            Corsair RMx White (2018)
+          </a>
+          <a
+            href="../Seystem Bulider.html"
+            id="cpu"
+            class="cpu2"
+            onclick="AddPower(document.getElementById('PowerName2').innerHTML, document.getElementById('PowerPrice2').innerHTML)"
+          >
+            + اضافة/add
+          </a>
+        </div>
+
+        <div class="bigDiv">
+          <div>
+            <p id="coreCount">750 W</p>
+          </div>
+          <div>
+            <p id="boostClock">White/Black</p>
+          </div>
+
+          <div class="flexx2">
+            <div class="symbolEu">$</div>
+            <p class="cpuPrice" id="PowerPrice2">304</p>
+          </div>
+        </div>
+      </div>
+      <hr />
+    </div>
+
+    <script>
+      let myVar;
+
+      function myFunction() {
+        myVar = setTimeout(showPage, 950);
+      }
+
+      function showPage() {
+        document.getElementById("loader").style.display = "none";
+        document.getElementById("myDiv").style.display = "block";
+      }
+
+      function AddPower(name, price) {
+        localStorage.setItem("PowerName00", name);
+        localStorage.setItem("PowerPrice00", price);
+      }
+
+      if (localStorage.getItem("cpuPrice") == "208") {
+        document.getElementById("willHide2").style.display = "none";
+      } else if (localStorage.getItem("cpuPrice") == "373") {
+        document.getElementById("willHide1").style.display = "none";
+      }
+    </script>
+  </body>
+</html>

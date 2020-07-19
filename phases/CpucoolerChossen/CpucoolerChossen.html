@@ -1,0 +1,133 @@
+<html>
+  <head>
+    <title>Choose a cpu cooler - كمبيوترك</title>
+    <link rel="stylesheet" href="../CpucoolerChossen/CpucoolerChossen.css" />
+  </head>
+  <body onload="myFunction()" style="margin: 0;">
+    <div id="loader"></div>
+    <div style="display: none;" id="myDiv" class="animate-bottom">
+      <div class="header1">
+        <p align="center" class="par22">
+          Chosse a Cpu Cooler / اختر مبرد للمعالج
+        </p>
+      </div>
+
+      <div class="headerNamesOfCom">
+        <p id="nameOfCpu">
+          Name/الاسم
+        </p>
+
+        <p id="Core">
+          Fan RPM /
+        </p>
+
+        <p class="selction">
+          color
+        </p>
+
+        <p class="price">
+          Price/السعر
+        </p>
+      </div>
+
+      <hr />
+
+      <div id="willHide1">
+        <div class="bg">
+          <div class="nameOfPart">
+            <a href="" id="CollerName1">
+              <img
+                src="https://cdn.pcpartpicker.com/static/forever/images/product/72348159ccd0114e590386d4e25586e5.256p.jpg"
+                class="cpuPhoto"
+              />
+              Thermaltake Water 3.0 360 ARGB Sync Edition
+            </a>
+            <a
+              href="../Seystem Bulider.html"
+              id="cpu"
+              class="cpu2"
+              onclick="AddCpuColler(document.getElementById('CollerName1').innerHTML, document.getElementById('colerPrice1').innerHTML)"
+            >
+              + اضافة/add
+            </a>
+          </div>
+
+          <div class="bigDiv">
+            <div>
+              <p id="coreCount">500 - 1500 RPM</p>
+            </div>
+            <div>
+              <p id="boostClock">Black</p>
+            </div>
+            <div class="flexx" id="flex">
+              <div class="symbolEu">$</div>
+              <p class="cpuPrice" id="colerPrice1">141</p>
+            </div>
+          </div>
+        </div>
+        <hr />
+      </div>
+
+      <div id="willHide2">
+        <div class="bg">
+          <div class="nameOfPart">
+            <a href="" id="CollerName2">
+              <img
+                src="https://cdn.pcpartpicker.com/static/forever/images/product/623066a73a9f4feafdea3ae659f80705.256p.jpg"
+                class="cpuPhoto"
+              />
+              Corsair H100i RGB PLATINUM
+            </a>
+            <a
+              href="../Seystem Bulider.html"
+              id="cpu"
+              class="cpu2"
+              onclick="AddCpuColler(document.getElementById('CollerName2').innerHTML,parseInt(document.getElementById('colerPrice2').innerHTML)) "
+            >
+              + اضافة/add
+            </a>
+          </div>
+
+          <div class="bigDiv">
+            <div>
+              <p id="coreCount">2400 RPM</p>
+            </div>
+            <div>
+              <p id="boostClock">Black / Silver</p>
+            </div>
+
+            <div class="flexx">
+              <div class="symbolEu">$</div>
+              <p class="cpuPrice" id="colerPrice2">219</p>
+            </div>
+          </div>
+          <hr />
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let myVar;
+
+      function myFunction() {
+        myVar = setTimeout(showPage, 950);
+      }
+
+      function showPage() {
+        document.getElementById("loader").style.display = "none";
+        document.getElementById("myDiv").style.display = "block";
+      }
+
+      function AddCpuColler(name, price) {
+        localStorage.setItem("cpuColerName00", name);
+        localStorage.setItem("cpuColerPrice", price);
+      }
+
+      if (localStorage.getItem("cpuPrice") == "208") {
+        document.getElementById("willHide2").style.display = "none";
+      } else if (localStorage.getItem("cpuPrice") == "373") {
+        document.getElementById("willHide1").style.display = "none";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,133 @@
+<html>
+  <head>
+    <title>Choose a Memory - كمبيوترك</title>
+    <link rel="stylesheet" href="../MemoryChossen/MemoryChossen.css" />
+    <link rel="stylesheet" href="../CpucoolerChossen/CpucoolerChossen.css" />
+  </head>
+  <body onload="myFunction()" style="margin: 0;">
+    <div id="loader"></div>
+    <div style="display: none;" id="myDiv" class="animate-bottom">
+      <div class="header1">
+        <p align="center" class="par22">
+          Chosse a Memory / اختر الذاكره
+        </p>
+      </div>
+
+      <div class="headerNamesOfCom">
+        <p id="nameOfCpu">
+          Name/الاسم
+        </p>
+
+        <p id="Core">
+          Speed/
+        </p>
+
+        <p class="selction">
+          Modules
+        </p>
+
+        <p class="price">
+          Price/السعر
+        </p>
+      </div>
+
+      <hr />
+      <div id="willHide1">
+        <div class="bg">
+          <div class="nameOfPart">
+            <a href="" id="memoryName">
+              <img
+                src="https://cdn.pcpartpicker.com/static/forever/images/product/87cd8e9d02ffb0997769f4a4d5969669.256p.jpg"
+                class="cpuPhoto"
+              />
+              Corsair Vengeance RGB Pro 16 GB
+            </a>
+            <a
+              href="../Seystem Bulider.html"
+              id="cpu"
+              class="cpu2"
+              onclick="AddMemory(document.getElementById('memoryName').innerHTML, document.getElementById('memoryPrice').innerHTML)"
+            >
+              + اضافة/add
+            </a>
+          </div>
+
+          <div class="bigDiv">
+            <div>
+              <p id="coreCount">DDR4-3200</p>
+            </div>
+            <div>
+              <p id="boostClock">2x8GB</p>
+            </div>
+            <div class="flexx">
+              <div class="symbolEu">$</div>
+              <p class="cpuPrice" id="memoryPrice">92</p>
+            </div>
+          </div>
+        </div>
+        <hr />
+      </div>
+
+      <div id="willHide2">
+        <div class="bg">
+          <div class="nameOfPart">
+            <a href="" id="memoryName2">
+              <img
+                src="https://images-eu.ssl-images-amazon.com/images/I/51dcKTDbLCL.jpg"
+                class="cpuPhoto"
+              />
+              Corsair Vengeance RGB Pro 32 GB
+            </a>
+            <a
+              href="../Seystem Bulider.html"
+              id="cpu"
+              class="cpu2"
+              onclick="AddMemory(document.getElementById('memoryName2').innerHTML, document.getElementById('memoryPrice2').innerHTML)"
+            >
+              + اضافة/add
+            </a>
+          </div>
+
+          <div class="bigDiv">
+            <div>
+              <p id="coreCount">DDR4-3200</p>
+            </div>
+            <div>
+              <p id="boostClock">2x16GB</p>
+            </div>
+
+            <div class="flexx">
+              <div class="symbolEu">$</div>
+              <p class="cpuPrice" id="memoryPrice2">149</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr />
+    </div>
+
+    <script>
+      let myVar;
+
+      function myFunction() {
+        myVar = setTimeout(showPage, 950);
+      }
+
+      function showPage() {
+        document.getElementById("loader").style.display = "none";
+        document.getElementById("myDiv").style.display = "block";
+      }
+
+      function AddMemory(name, price) {
+        localStorage.setItem("MemoryName00", name);
+        localStorage.setItem("MemoryPrice00", price);
+      }
+
+      if (localStorage.getItem("cpuPrice") == "208") {
+        document.getElementById("willHide2").style.display = "none";
+      } else if (localStorage.getItem("cpuPrice") == "373") {
+        document.getElementById("willHide1").style.display = "none";
+      }
+    </script>
+  </body>
+</html>

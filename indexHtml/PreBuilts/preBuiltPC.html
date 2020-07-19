@@ -1,0 +1,168 @@
+<html>
+  <head>
+    <title>PreBuiltsPC - كمبيوترك</title>
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-auth.js"></script>
+    <script src="../global/global.js"></script>
+    <link rel="stylesheet" href="../global/global.css">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    
+    <!-- JS, Popper.js, and jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" href="preBuiltPC.css">
+  
+  </head>
+  <body>
+
+    <div class="header">
+      <div id="myNav" class="overlay myEditSideBar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+          >&times;</a
+        >
+        <div class="overlay-content">
+          <a href="../index.html">الصفحة</a>
+          <a href="#">Cpu/المعالج</a>
+          <a href="#">Cpu Coller/مبرد للمعالج</a>
+          <a href="#">Mother Board/الوحة الأم</a>
+          <a href="#">Memory/الذاكرة</a>
+          <a href="#">Storage/وحدة التخزين</a>
+          <a href="#"> Video Card/كرت الشاشة</a>
+          <a href="#"> Case/الغطاء</a>
+          <a href="#">Power Supply/ مزود الطاقة</a>
+          <a href="#">Additionals/اضافات</a>
+        </div>
+      </div>
+      <span
+        style="padding-left: 60px; padding-top: 80px; font-size: 30px;"
+        onclick="openNav()"
+        >&#9776;
+      </span>
+
+      <a href="../index.html" class="homePage">
+        الصفحة الرئيسية
+      </a>
+
+      <a href="" class="homePage2">
+        صفحة بناء الكمبيوتر
+      </a>
+
+      <div id="title">
+        <img src="./photossss/5.png" width="160px" />
+        <div>
+          كمبيوترك
+        </div>
+      </div>
+
+      <div class="me">
+        <a class="navbar navMyedit"></a>
+        <a href="" class="sign" id="signOut" onclick="signOut()">
+          تسجيل خروج
+        </a>
+        <a href="../sign up/sign up.html" id="signUp" class="sign">
+          تسجيل حساب جديد
+        </a>
+        <a href="../sign in/sign in.html" class="sign" id="signIn"
+          >تسجيل دخول
+        </a>
+      </div>
+    </div>
+ 
+
+
+
+    <a class="sticky" href="">
+      <img src="./photossss/message.png" width="50px" height="50px" />
+    </a>
+
+
+
+
+<!--     
+    <div class="header1">
+      <p align="center" class="par22">الكمبيوترات الجاهزه</p>
+    </div> -->
+
+    <div class="flexCards">
+
+
+    <div class="pageintro">
+        <div class="alldivs">
+          <li class= "list">
+            <div class="card00">
+              <div>
+                <img src="https://quadrastores.com/uploads/product_image/product_5048_1_thumb.jpg" class="cardPhoto">
+              </div>
+              <h1>Bolt i5 Gaming PC</h1>
+              <ul class="ul"> 
+                 كمبيوتر قيمنق 
+              </ul>
+                 <br>
+            </div>
+          </li>
+          <a class="prebuilt" href="./pc1/pc1.html"> اشتر </a>
+    </div>
+
+
+    <li class= "list">
+        <div class="card00">
+          <div>
+            <img src="https://quadrastores.com/uploads/product_image/product_5051_1_thumb.jpg" class="cardPhoto">
+          </div>
+          
+          <h1>Reaper i5 Gaming PC</h1>
+          <ul class="ul"> 
+             كمبيوتر قيمنق 
+          </ul>
+             <br>
+        
+        </div>
+      </li>
+      <a class="prebuilt" href="./pc2/pc2.html">    اشتر  </a>
+
+
+    <li class= "list">
+        <div class="card2">
+          <div>
+            <img src="https://quadrastores.com/uploads/product_image/product_5050_1.jpg" class="cardPhoto2">
+          </div>
+
+          <h1>Bolt i5 Gaming PC (White)</h1>
+          <ul class="ul"> 
+             كمبيوتر قيمنق 
+          </ul>
+             <br>
+         
+        </div>
+      </li>
+      <a class="prebuilt" href="./pc3/pc3.html"> اشتر</a>
+
+    </div>
+  </body>
+</html>

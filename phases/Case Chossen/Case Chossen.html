@@ -1,0 +1,134 @@
+<html>
+  <head>
+    <title>Choose a Case - كمبيوترك</title>
+    <link rel="stylesheet" href="../Case Chossen/Case Chossen.css" />
+    <link rel="stylesheet" href="../CpucoolerChossen/CpucoolerChossen.css">
+  </head>
+  <body onload="myFunction()" style="margin: 0;">
+    <div id="loader"></div>
+    <div style="display: none;" id="myDiv" class="animate-bottom">
+    <div class="header1">
+      <p align="center" class="par22">
+        Chosse a Case / اختر الوحة الأم
+      </p>
+    </div>
+
+    <div class="headerNamesOfCom">
+      <p id="nameOfCpu">
+        Name/الاسم
+      </p>
+
+      <p id="Core">
+        Color/الون
+      </p>
+
+      <p class="selction">
+        Type
+      </p>
+
+      <p class="price">
+        Price/السعر
+      </p>
+    </div>
+
+    <hr />
+    <div id="willHide1">
+    <div class="bg">
+    <div class="nameOfPart">
+      <a href="" id="CaseName">
+        <img
+          src="https://cdn.pcpartpicker.com/static/forever/images/product/b35ad4944a6207c0e307154137834af6.256p.jpg"
+          class="cpuPhoto"
+        />
+        Corsair SPEC-DELTA RGB
+      </a>
+      <a
+        href="../Seystem Bulider.html"
+        id="cpu"
+        class="cpu2"
+        onclick="AddCase(document.getElementById('CaseName').innerHTML, document.getElementById('CasePrice').innerHTML)"
+      >
+        + اضافة/add
+      </a>
+    </div>
+
+    <div class="bigDiv">
+      <div>
+        <p id="coreCount">Black</p>
+      </div>
+      <div>
+        <p id="boostClock">ATX Mid Tower</p>
+      </div>
+
+      <div class="flexx">
+        <div class="symbolEu">$</div>
+        <p class="cpuPrice" id="CasePrice">89</p>
+      </div>
+    </div>
+  </div>
+    <hr />
+  </div>
+
+  <div id="willHide2">
+        <div class="bg">
+        <div class="nameOfPart">
+          <a href="" id="CaseName2">
+            <img
+              src="https://cdn.pcpartpicker.com/static/forever/images/product/604fef5ac9874dffa927a3db98c1188d.256p.jpg"
+              class="cpuPhoto"
+            />
+            NZXT H510
+          </a>
+          <a
+            href="../Seystem Bulider.html"
+            id="cpu"
+            class="cpu2"
+            onclick="AddCase(document.getElementById('CaseName2').innerHTML, document.getElementById('CasePrice2').innerHTML)"
+          >
+            + اضافة/add
+          </a>
+        </div>
+
+        <div class="bigDiv">
+          <div>
+            <p id="coreCount">White</p>
+          </div>
+          <div>
+            <p id="boostClock">ATX Mid Tower</p>
+          </div>
+
+          <div class="flexx">
+            <div class="symbolEu">$</div>
+            <p class="cpuPrice" id="CasePrice2">69</p>
+          </div>
+        </div>
+      </div>
+        <hr />
+  </div>
+
+    <script>
+      let myVar;
+
+      function myFunction() {
+        myVar = setTimeout(showPage, 950);
+      }
+
+      function showPage() {
+        document.getElementById("loader").style.display = "none";
+        document.getElementById("myDiv").style.display = "block";
+      }
+
+      function AddCase(name, price) {
+        localStorage.setItem("CaseName00", name);
+        localStorage.setItem("CasePrice00", price);
+      }
+
+
+      if (localStorage.getItem("cpuPrice") == "208") {
+        document.getElementById("willHide2").style.display = "none";
+      } else if (localStorage.getItem("cpuPrice") == "373") {
+        document.getElementById("willHide1").style.display = "none";
+      }
+    </script>
+  </body>
+</html>

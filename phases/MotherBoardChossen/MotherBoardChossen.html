@@ -1,0 +1,133 @@
+<html>
+  <head>
+    <title>Choose a MotherBoard - كمبيوترك</title>
+    <link rel="stylesheet" href="./MotherBoardChossen.css" />
+    <link rel="stylesheet" href="../CpucoolerChossen/CpucoolerChossen.css">
+  </head>
+  <body onload="myFunction()" style="margin: 0;">
+    <div id="loader"></div>
+    <div style="display: none;" id="myDiv" class="animate-bottom">
+    <div class="header1">
+      <p align="center" class="par22">
+        Chosse a MotherBoard / اختر الوحة الأم
+      </p>
+    </div>
+
+    <div class="headerNamesOfCom">
+      <p id="nameOfCpu">
+        Name/الاسم
+      </p>
+
+      <p id="Core">
+        Memory Max/
+      </p>
+
+      <p class="selction">
+        Memory slots
+      </p>
+
+      <p class="price">
+        Price/السعر
+      </p>
+    </div>
+
+    <hr />
+
+    <div id='willHide1'>
+    <div class="bg">
+    <div class="nameOfPart">
+      <a href="" id="motherName">
+        <img
+          src="https://cdn.pcpartpicker.com/static/forever/images/product/65d2e2e1dd6c41fe051500c6d88ffe0c.256p.jpg"
+          class="cpuPhoto"
+        />
+        MSI Z390-A PRO
+      </a>
+      <a
+        href="../Seystem Bulider.html"
+        id="cpu"
+        class="cpu2"
+        onclick="AddMother(document.getElementById('motherName').innerHTML, document.getElementById('motherPrice').innerHTML)"
+      >
+        + اضافة/add
+      </a>
+    </div>
+
+    <div class="bigDiv">
+      <div>
+        <p id="coreCount">128 GB</p>
+      </div>
+      <div>
+        <p id="boostClock">4</p>
+      </div>
+
+      <div class="flexx">
+        <div class="symbolEu">$</div>
+        <p class="cpuPrice" id="motherPrice">130</p>
+      </div>
+    </div>
+  </div>
+    <hr />
+  </div>
+    <div id="willHide2">
+    <div class="bg">
+    <div class="nameOfPart">
+      <a href="" id="motherName2">
+        <img
+          src="https://cdn.pcpartpicker.com/static/forever/images/product/f68bd53f6c04fd23f6c3f2a1dfdaa1e2.256p.jpg"
+          class="cpuPhoto"
+        />
+        MSI B360 GAMING PLUS
+      </a>
+      <a
+        href="../Seystem Bulider.html"
+        id="cpu"
+        class="cpu2"
+        onclick="AddMother(document.getElementById('motherName2').innerHTML, document.getElementById('motherPrice2').innerHTML)"
+      >
+        + اضافة/add
+      </a>
+    </div>
+
+    <div class="bigDiv">
+      <div>
+        <p id="coreCount">64 GB</p>
+      </div>
+      <div>
+        <p id="boostClock">4</p>
+      </div>
+      <div class="flexx">
+        <div class="symbolEu">$</div>
+        <p class="cpuPrice" id="motherPrice2">99</p>
+      </div>
+    </div>
+  </div>
+    <hr />
+  </div>
+
+    <script>
+      let myVar;
+
+      function myFunction() {
+        myVar = setTimeout(showPage, 950);
+      }
+
+      function showPage() {
+        document.getElementById("loader").style.display = "none";
+        document.getElementById("myDiv").style.display = "block";
+      }
+
+      function AddMother(name, price) {
+        localStorage.setItem("MotherName00", name);
+        localStorage.setItem("MotherPrice00", price);
+      }
+
+
+      if (localStorage.getItem("cpuPrice") == "208") {
+        document.getElementById("willHide2").style.display = "none";
+      } else if (localStorage.getItem("cpuPrice") == "373") {
+        document.getElementById("willHide1").style.display = "none";
+      }
+    </script>
+  </body>
+</html>

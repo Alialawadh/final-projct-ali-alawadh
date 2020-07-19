@@ -1,0 +1,669 @@
+<html>
+  <head>
+    <title>System Builder - كمبيوترك</title>
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-firestore.js"></script>
+
+
+    <link rel="stylesheet" href="../phases/Seystem Bulider.css" />
+    <link rel="stylesheet" href="./global/global.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../indexHtml/index.css" />
+    <!-- JS, Popper.js, and jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  </head>
+
+
+
+  <body>
+    <div class="header">
+      <div id="myNav" class="overlay myEditSideBar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+          >&times;</a
+        >
+        <div class="overlay-content">
+          <a href="Cpuchossen/CpuChossen.html">Cpu/المعالج</a>
+          <a href="CpucoolerChossen/CpucoolerChossen.html">Cpu Coller/مبرد للمعالج</a>
+          <a href="MotherBoardChossen/MotherBoardChossen.html">Mother Board/الوحة الأم</a>
+          <a href="MemoryChossen/MemoryChossen.html">Memory/الذاكرة</a>
+          <a href="StorageChossen/StorageChossen.html">Storage/وحدة التخزين</a>
+          <a href="VideoCard Chossen/VideoCard Chossen.html"> Video Card/كرت الشاشة</a>
+          <a href="Case Chossen/Case Chossen.html"> Case/الغطاء</a>
+          <a href="Power Supply Chossen/Power Supply Chossen.html">Power Supply/ مزود الطاقة</a>
+          <a href="Additionals Chossen/Additionals Chossen.html">Additionals/اضافات</a>
+        </div>
+      </div>
+      <span
+        style="padding-left: 60px; padding-top: 80px; font-size: 30px;"
+        onclick="openNav()"
+        >&#9776;
+      </span>
+
+      <a class="homePage">
+        الصفحة الرئيسية
+      </a>
+
+      <a class="homePage2">
+        صفحة بناء الكمبيوتر
+      </a>
+
+      <div id="title">
+        <img src="./photos/5.png" width="160px" />
+        <div>
+          كمبيوترك
+        </div>
+      </div>
+
+      <div class="me">
+        <a class="navbar navMyedit"></a>
+        <a href="" class="sign" id="signOut" onclick="signOut()">
+          تسجيل خروج
+        </a>
+        <a href="../indexHtml/sign up/sign up.html" id="signUp" class="sign">
+          تسجيل حساب جديد
+        </a>
+        <a href="../indexHtml/sign in/sign in.html" class="sign" id="signIn"
+          >تسجيل دخول
+        </a>
+
+        <p id="userName"></p>
+      </div>
+    </div>
+    
+    <a class="sticky" href="./opinios/opinios.html">
+      <img src="./photos/message.png" width="50px" height="50px" />
+    </a>
+    
+    <div class="downTitle">System Builder/نظام بناء الكمبيوتر</div>
+
+      <div class="headerNamesOfCom">
+        <p>
+          المكون
+        </p>
+
+        <p class="selction">
+          الاختيار
+        </p>
+
+        <p class="price">
+          Price/السعر
+        </p>
+      </div>
+
+      <hr />
+
+      <div data-aos="fade-up" data-aos-duration="2000">
+        <div class="bgOfProduct">
+          <div class="nameOfPart">
+            <a href="./Cpuchossen/CpuChossen.html" id="cpu0">
+              Cpu
+            </a>
+
+            <a class="cpuCpu" href="./Cpuchossen/CpuChossen.html" id="cpu">
+              + اختر معالج</a
+            >
+            <a id="cpuName" href="https://de.pcpartpicker.com/product/28qhP6/intel-core-i5-9600k-37ghz-6-core-processor-bx80684i59600k" > </a>
+            <p class="cpu" id="CpuPri1"></p>
+          </div>
+        </div>
+
+        <form>
+          <input
+            id="hideButton"
+            type="hidden"
+            value="ازالة"
+            onclick="      removePrice1(
+              'CpuPri1',
+              'cpuName',
+              'cpuPrice',
+              'cpuName00',
+              'hideButton',
+              'cpu'
+            )"
+          />
+        </form>
+      </div>
+
+      <div data-aos="fade-up" data-aos-duration="3000">
+        <div class="bgOfProduct">
+          <div class="nameOfPart">
+            <a href="./CpucoolerChossen/CpucoolerChossen.html" id="cpu2">
+              Cpu Cooler
+            </a>
+            <a
+              class="cpu2"
+              href="./CpucoolerChossen/CpucoolerChossen.html"
+              id="cpuColerBtn"
+            >
+              + اختر مبرد للمعالج</a
+            >
+            <a id="CpuColerName"></a>
+            <p class="cpu" id="CpuColerPri"></p>
+          </div>
+        </div>
+
+        <form>
+          <input
+            id="hideButton2"
+            type="hidden"
+            value="ازالة"
+            onclick="      removePrice1(
+              'CpuColerPri',
+              'CpuColerName',
+              'cpuColerPrice',
+              'cpuColerName00',
+              'hideButton2',
+              'cpuColerBtn'
+            )"
+          />
+        </form>
+      </div>
+      <div data-aos="fade-up" data-aos-duration="3000">
+        <div class="bgOfProduct">
+          <div class="nameOfPart">
+            <a href="./MotherBoardChossen/MotherBoardChossen.html" id="cpu3">
+              Motherboard
+            </a>
+            <a
+              class="cpu2"
+              href="./MotherBoardChossen/MotherBoardChossen.html"
+              id="MotherBtn"
+            >
+              + اختر اللوحة الأم
+            </a>
+            <a id="MotherNamePar"></a>
+            <p id="MotherPricePar"></p>
+          </div>
+        </div>
+
+        <form>
+          <input
+            id="hideButton3"
+            type="hidden"
+            value="ازالة"
+            onclick="      removePrice1(
+              'MotherPricePar',
+              'MotherNamePar',
+              'MotherPrice00',
+              'MotherName00',
+              'hideButton3',
+              'MotherBtn'
+            )"
+          />
+        </form>
+      </div>
+
+      <div data-aos="fade-up" data-aos-duration="2000">
+        <div class="bgOfProduct">
+          <div class="nameOfPart">
+            <a href="./MemoryChossen/MemoryChossen.html" id="cpu4">
+              Memory
+            </a>
+            <a
+              class="cpu2"
+              href="./MemoryChossen/MemoryChossen.html"
+              id="MemoryBtn"
+            >
+              + اختر ذاكرة
+            </a>
+
+            <a id="MemoryNamePar"></a>
+            <p class="cpu" id="MemoryPricePar"></p>
+          </div>
+        </div>
+
+        <form>
+          <input
+            id="hideButton4"
+            type="hidden"
+            value="ازالة"
+            onclick="      removePrice1(
+              'MemoryPricePar',
+              'MemoryNamePar',
+              'MemoryPrice00',
+              'MemoryName00',
+              'hideButton4',
+              'MemoryBtn'
+            )"
+          />
+        </form>
+      </div>
+      <div data-aos="fade-up" data-aos-duration="2000">
+        <div class="bgOfProduct">
+          <div class="nameOfPart">
+            <a href="./StorageChossen/StorageChossen.html" id="cpu05">
+              Storage
+            </a>
+            <a
+              class="cpu2"
+              href="./StorageChossen/StorageChossen.html"
+              id="StorageBtn"
+            >
+              + اختر وحده تخزين</a
+            >
+            <a id="StorageNamePar"></a>
+            <p class="cpu" id="StoragePricePar"></p>
+          </div>
+        </div>
+
+        <form>
+          <input
+            id="hideButton5"
+            type="hidden"
+            value="ازالة"
+            onclick="      removePrice1(
+              'StoragePricePar',
+              'StorageNamePar',
+              'StoragePrice00',
+              'StorageName00',
+              'hideButton5',
+              'StorageBtn'
+            )"
+          />
+        </form>
+      </div>
+      <div data-aos="fade-up" data-aos-duration="2000" >
+        <div class="bgOfProduct">
+          <div class="nameOfPart">
+            <a href="./VideoCard Chossen/VideoCard Chossen.html" id="cpu6">
+              Video Card
+            </a>
+            <a
+              class="cpu2"
+              href="./VideoCard Chossen/VideoCard Chossen.html"
+              id="VideoBtn"
+            >
+              + اختر كرت شاشة</a
+            >
+            <a id="VideoNamePar"></a>
+            <p class="cpu" id="VideoPricePar"></p>
+          </div>
+        </div>
+
+        <form>
+          <input
+            id="hideButton6"
+            type="hidden"
+            value="ازالة"
+            onclick="      removePrice1(
+              'VideoPricePar',
+              'VideoNamePar',
+              'VideoPrice00',
+              'VideoName00',
+              'hideButton6',
+              'VideoBtn'
+            )"
+          />
+        </form>
+      </div>
+      <div data-aos="fade-up" data-aos-duration="2000">
+        <div class="bgOfProduct">
+          <div class="nameOfPart">
+            <a href="./Case Chossen/Case Chossen.html" id="cpu7">
+              Case
+            </a>
+            <a
+              class="cpu2"
+              href="./Case Chossen/Case Chossen.html"
+              id="CaseBtn"
+            >
+              + اختر غطاء</a
+            >
+            <a id="CaseNamePar"></a>
+            <p class="cpu" id="CasePricePar"></p>
+          </div>
+        </div>
+
+        <form>
+          <input
+            id="hideButton7"
+            type="hidden"
+            value="ازالة"
+            onclick="      removePrice1(
+              'CasePricePar',
+              'CaseNamePar',
+              'CasePrice00',
+              'CaseName00',
+              'hideButton7',
+              'CaseBtn'
+            )"
+          />
+        </form>
+      </div>
+
+      <div data-aos="fade-up" data-aos-duration="2000">
+        <div class="bgOfProduct">
+          <div class="nameOfPart">
+            <a href="./Power Supply Chossen/Power Supply Chossen.html" id="cpu8">
+              Power Supply
+            </a>
+            <a
+              class="cpu2"
+              href="./Power Supply Chossen/Power Supply Chossen.html"
+              id="PowerBtn"
+            >
+              + اختر مزود الطاقة</a
+            >
+            <a id="PowerNamePar"></a>
+            <p class="cpu" id="PowerPricePar"></p>
+          </div>
+        </div>
+
+        <form>
+          <input
+            id="hideButton8"
+            type="hidden"
+            value="ازالة"
+            onclick="      removePrice1(
+              'PowerPricePar',
+              'PowerNamePar',
+              'PowerPrice00',
+              'PowerName00',
+              'hideButton8',
+              'PowerBtn'
+            )"
+          />
+        </form>
+      </div>
+
+      <div data-aos="fade-up" data-aos-duration="2000">
+        <div class="bgOfProduct">
+          <div class="nameOfPart">
+            <a href="./Additionals Chossen/Additionals Chossen.html" id="cpu9">
+              Additionals
+            </a>
+            <a
+              class="cpu2"
+              href="./Additionals Chossen/Additionals Chossen.html"
+              id="AddsBtn"
+            >
+              + اختر الاضافات</a
+            >
+
+            <a id="AddsNamePar"></a>
+            <p class="cpu" id="AddsPricePar"></p>
+          </div>
+        </div>
+
+        <form>
+          <input
+            id="hideButton9"
+            type="hidden"
+            value="ازالة"
+            onclick="      removePrice1(
+              'AddsPricePar',
+              'AddsNamePar',
+              'AddsPrice00',
+              'AddsName00',
+              'hideButton9',
+              'AddsBtn'
+            )"
+          />
+        </form>
+      </div>
+
+      <div class="total">
+        <div id="total"></div>
+        <div>
+            <a id="op"  href="./opinios/opinios.html">مناقشات</a>
+        </div>
+  
+      </div>
+
+
+
+
+      <div class="foter">
+        <footer>
+          <div class="fotDiv">
+            <p class="socialsFot">socials</p>
+            <a href="https://www.instagram.com/alawadh_bluex/">
+              <img class="forInsta" src="../phases/photos/insta.png" />
+            </a>
+
+
+
+            <a href="https://twitter.com/0BlueX0">
+              <img class="fotTwitter" src="../phases/photos/twitter.png" />
+            </a>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+
+    <script src="global/global.js"></script>
+    <script>
+ 
+
+      let v2 = localStorage.getItem("cpuName00");
+      let ColerName = localStorage.getItem("cpuColerName00");
+      let MotherNameLocal = localStorage.getItem("MotherName00");
+      let MemoryNameLocal = localStorage.getItem("MemoryName00");
+      let StorageNameLocal = localStorage.getItem("StorageName00");
+      let VideoNameLocal = localStorage.getItem("VideoName00");
+      let CaseNameLocal = localStorage.getItem("CaseName00");
+      let PowerNameLocal = localStorage.getItem("PowerName00");
+      let AddsNameLocal = localStorage.getItem("AddsName00");
+      let total = 0;
+     
+
+
+      function CheckChossen(
+        nameKey,
+        removeButtonId,
+        addButtonId,
+        parName,
+        PriceKey,
+        PriceId
+      ) {
+        if (nameKey == null) {
+          console.log("nothing");
+        } else {
+          document.getElementById(removeButtonId).type = "submit";
+          document.getElementById(addButtonId).style.display = "none";
+          document.getElementById(parName).innerHTML = nameKey;
+          let Price = localStorage.getItem(PriceKey);
+          document.getElementById(PriceId).innerHTML = "$" + parseInt(Price);
+          total += parseInt(Price);
+          document.getElementById("total").innerHTML = "total : " + "$" + total;
+          console.log(Price);
+        }
+      }
+
+      CheckChossen(v2, "hideButton", "cpu", "cpuName", "cpuPrice", "CpuPri1");
+
+      // ##########################################################################################
+      //    this is the Cooller function
+      // ##########################################################################################
+
+      CheckChossen(
+        ColerName,
+        "hideButton2",
+        "cpuColerBtn",
+        "CpuColerName",
+        "cpuColerPrice",
+        "CpuColerPri"
+      );
+
+      // ##########################################################################################
+      //    this is the Mother function
+      // ##########################################################################################
+
+      CheckChossen(
+        MotherNameLocal,
+        "hideButton3",
+        "MotherBtn",
+        "MotherNamePar",
+        "MotherPrice00",
+        "MotherPricePar"
+      );
+
+      // ##########################################################################################
+      //    this is the Memory function
+      // ##########################################################################################
+
+      CheckChossen(
+        MemoryNameLocal,
+        "hideButton4",
+        "MemoryBtn",
+        "MemoryNamePar",
+        "MemoryPrice00",
+        "MemoryPricePar"
+      );
+
+      // ##########################################################################################
+      //    this is the Storage function
+      // ##########################################################################################
+
+      CheckChossen(
+        StorageNameLocal,
+        "hideButton5",
+        "StorageBtn",
+        "StorageNamePar",
+        "StoragePrice00",
+        "StoragePricePar"
+      );
+
+      // ##########################################################################################
+      //    this is the Video function
+      // ##########################################################################################
+
+      CheckChossen(
+        VideoNameLocal,
+        "hideButton6",
+        "VideoBtn",
+        "VideoNamePar",
+        "VideoPrice00",
+        "VideoPricePar"
+      );
+
+      // ##########################################################################################
+      //    this is the Case function
+      // ##########################################################################################
+
+      CheckChossen(
+        CaseNameLocal,
+        "hideButton7",
+        "CaseBtn",
+        "CaseNamePar",
+        "CasePrice00",
+        "CasePricePar"
+      );
+
+      // ##########################################################################################
+      //    this is the Power function
+      // ##########################################################################################
+
+      CheckChossen(
+        PowerNameLocal,
+        "hideButton8",
+        "PowerBtn",
+        "PowerNamePar",
+        "PowerPrice00",
+        "PowerPricePar"
+      );
+
+      // ##########################################################################################
+      //    this is the Add function
+      // ##########################################################################################
+
+      CheckChossen(
+        AddsNameLocal,
+        "hideButton9",
+        "AddsBtn",
+        "AddsNamePar",
+        "AddsPrice00",
+        "AddsPricePar"
+      );
+
+      function removePrice1(
+        PriceId,
+        parName,
+        PriceKey,
+        nameKey,
+        removeButtonId,
+        addButtonId
+      ) {
+        total = total - parseInt(localStorage.getItem(PriceKey));
+        document.getElementById("total").innerHTML = "total : " + "$" + total;
+        document.getElementById(PriceId).innerHTML = "";
+        document.getElementById(parName).innerHTML = "";
+        localStorage.removeItem(PriceKey);
+        localStorage.removeItem(nameKey);
+        document.getElementById(removeButtonId).type = "hidden";
+        document.getElementById(addButtonId).style.display = "initial";
+        swal({
+          title: "تمت الازاله!",
+          text: "لقد ازلت المنتج!",
+          icon: "success",
+          button: "Aww yiss!",
+        });
+    
+      }
+
+      
+      function openNav() {
+  document.getElementById("myNav").style.width = "20%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+
+function checkSignedIn() {
+  let signInBtn = document.querySelector("#signIn");
+  let signUpBtn = document.querySelector("#signUp");
+  let signOutBtn = document.querySelector("#signOut");
+
+  if (auth.currentUser !== null) {
+    signInBtn.style.display = "none";
+    signUpBtn.style.display = "none";
+    console.log(auth.currentUser.email);
+  } else if (auth.currentUser == null) {
+    signOutBtn.style.display = "none";
+  }
+}
+
+
+    </script>
+
+
+
+    <script src="./Seystem Builder.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

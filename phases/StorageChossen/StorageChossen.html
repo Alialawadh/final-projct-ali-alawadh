@@ -1,0 +1,136 @@
+<html>
+  <head>
+    <title>Choose a Storage - كمبيوترك</title>
+    <link rel="stylesheet" href="../StorageChossen/StorageChossen.css" />
+    <link rel="stylesheet" href="../CpucoolerChossen/CpucoolerChossen.css">
+  </head>
+  <body onload="myFunction()" style="margin: 0;">
+
+    <div id="loader"></div>
+    <div style="display: none;" id="myDiv" class="animate-bottom">
+
+    <div class="header1">
+      <p align="center" class="par22">
+        Chosse a Storage / اختر وحده تخزين
+      </p>
+    </div>
+
+    <div class="headerNamesOfCom">
+      <p id="nameOfCpu">
+        Name/الاسم
+      </p>
+
+      <p id="Core">
+        Capacity/ سعه التخزين
+      </p>
+
+      <p class="selction">
+        Type
+      </p>
+
+      <p class="price">
+        Price/السعر
+      </p>
+    </div>
+
+    <hr />
+    <div id="willHide1">
+    <div class="bg">
+    <div class="nameOfPart">
+      <a href="" id="storageName">
+        <img
+          src="https://cdn.pcpartpicker.com/static/forever/images/product/a3b09866e3716566572bf9a13792cc85.256p.jpg"
+          class="cpuPhoto"
+        />
+        Western Digital Blue
+      </a>
+      <a
+        href="../Seystem Bulider.html"
+        id="cpu"
+        class="cpu2"
+        onclick="AddStorage(document.getElementById('storageName').innerHTML, document.getElementById('storagePrice').innerHTML)"
+      >
+        + اضافة/add
+      </a>
+    </div>
+
+    <div class="bigDiv">
+      <div>
+        <p id="coreCount">500 GB</p>
+      </div>
+      <div>
+        <p id="boostClock">SSD</p>
+      </div>
+
+      <div class="flexx">
+        <div class="symbolEu">$</div>
+        <p class="cpuPrice" id="storagePrice">62</p>
+      </div>
+    </div>
+  </div>
+    <hr />
+  </div>
+    <div id="willHide2">
+    <div class="bg">
+    <div class="nameOfPart">
+      <a href="" id="storageName2">
+        <img
+          src="https://images-na.ssl-images-amazon.com/images/I/41JC05zWJQL.jpg"
+          class="cpuPhoto"
+        />
+        Seagate Barracuda Compute
+      </a>
+      <a
+        href="../Seystem Bulider.html"
+        id="cpu"
+        class="cpu2"
+        onclick="AddStorage(document.getElementById('storageName2').innerHTML, document.getElementById('storagePrice2').innerHTML)"
+      >
+        + اضافة/add
+      </a>
+    </div>
+
+    <div class="bigDiv">
+      <div>
+        <p id="coreCount">2 TB</p>
+      </div>
+      <div>
+        <p id="boostClock">7200RPM</p>
+      </div>
+
+      <div class="flexx">
+        <div class="symbolEu">$</div>
+        <p class="cpuPrice" id="storagePrice2">53</p>
+      </div>
+    </div>
+  </div>
+    <hr />
+  </div>
+
+    <script>
+      let myVar;
+
+      function myFunction() {
+        myVar = setTimeout(showPage, 950);
+      }
+
+      function showPage() {
+        document.getElementById("loader").style.display = "none";
+        document.getElementById("myDiv").style.display = "block";
+      }
+
+      function AddStorage(name, price) {
+        localStorage.setItem("StorageName00", name);
+        localStorage.setItem("StoragePrice00", price);
+      }
+
+
+      if (localStorage.getItem("cpuPrice") == "208") {
+        document.getElementById("willHide2").style.display = "none";
+      } else if (localStorage.getItem("cpuPrice") == "373") {
+        document.getElementById("willHide1").style.display = "none";
+      }
+
+    </script>
+  </body>
+</html>

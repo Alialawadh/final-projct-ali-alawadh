@@ -1,0 +1,582 @@
+body {
+  margin: 0px;
+  background-image: url(./PreBuilts/photossss/bg.png);
+  background-repeat: no-repeat;
+  background-size: 2200px;
+  font-family: "Lato", sans-serif;
+}
+
+.navthing {
+  background-color: rgba(48, 45, 66, 0.918);
+  padding-top: 20px;
+}
+
+.me {
+  padding-left: 400px;
+  padding-top: 80px;
+}
+
+.me2 {
+  margin-left: -1100px;
+}
+
+#droping {
+  margin-left: -2150px;
+  margin-top: 40px;
+}
+
+#homme {
+  margin-left: 160px;
+  margin-top: -42px;
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+.par22 {
+  font-size: 40px;
+  text-align: center;
+  font-weight: bold;
+  color: rgb(83, 253, 236);
+  padding: 20px;
+}
+
+.asd {
+  color: white;
+}
+
+.sign {
+  color: white;
+  background-color: rgb(148, 183, 189);
+  border-radius: 4px;
+  padding: 14px;
+  margin: 10px;
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+.sign:hover {
+  transition: all 0.3s ease;
+  -webkit-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+  transform: scale(1.3);
+  text-decoration: none;
+}
+
+#sign0:hover {
+  transition: all 0.3s ease;
+  -webkit-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+  transform: scale(1.3);
+  text-decoration: none;
+}
+
+.slide {
+  width: 1200px;
+  margin: 0px 400px 0px 640px;
+  height: 500px;
+  padding-right: -200px;
+  padding-left: -200px;
+  margin-top: 50px;
+}
+
+.carousel {
+  margin-left: 350px;
+}
+
+.corPhoto {
+  padding-top: 80px;
+  display: flex;
+  width: 1200px;
+  height: 500px;
+}
+
+.pageintro {
+  /* background-color: rgb(118, 140, 151); */
+  padding: 200px;
+  display: flex;
+  color: white;
+  margin-left: -400px;
+}
+
+#divpc {
+  text-align: right;
+  font-size: 60px;
+  font-weight: bolder;
+  color: black;
+  margin-left: 500px;
+}
+
+#par {
+  font-size: 20px;
+}
+
+.btn {
+  background-color: rgb(60, 42, 92);
+  color: white;
+  font-size: 300px;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.btn:hover {
+  text-decoration: none;
+  color: snow;
+  opacity: 1000px;
+  background-color: teal;
+  -webkit-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+  transform: scale(1.3);
+  transition: all 0.3s ease;
+}
+
+.card {
+  display: flex;
+  align-items: right;
+  text-align: center;
+  margin-top: -100px;
+  margin-left: 50px;
+  background-color: rgb(2, 119, 119);
+  padding-top: 50px;
+  padding-bottom: 100px;
+  width: 360px;
+  height: 500px;
+  border-radius: 20px;
+}
+
+.card:hover {
+  opacity: 0.7px;
+  padding: 10px;
+  background-color: rgb(107, 152, 189);
+  box-shadow: 1px 1px rgb(56, 56, 56), 2px 2px rgb(56, 56, 56),
+    3px 3px rgb(56, 56, 56);
+  -webkit-transform: translateX(-3px);
+  transform: translateX(-3px);
+  transition: all 0.3s ease;
+}
+
+#card2 {
+  margin-left: 460px;
+}
+
+.list {
+  list-style-type: none;
+}
+
+.alldivs {
+  width: 300px;
+  height: 460px;
+  margin-right: 200px;
+  display: flex;
+}
+
+.carousel-control-prev-icon {
+  color: black;
+}
+
+.carousel-control-next-icon {
+  color: black;
+}
+
+.foter {
+  background-color: rgb(27, 39, 66);
+  padding: 20px;
+}
+
+.guide__images--1 {
+  grid-column: 1;
+  grid-row: 1/3;
+  justify-self: center;
+  align-self: left;
+}
+
+.asd1 {
+  color: snow;
+  font-weight: bolder;
+  margin-top: px;
+}
+
+.asd1:hover {
+  padding: 2px;
+  box-shadow: cornsilk;
+  text-shadow: darkblue;
+  opacity: 1px;
+  transition: all 0.3s ease;
+}
+
+.logo {
+  width: 100px;
+}
+
+#logo-Name {
+  color: snow;
+  font-weight: bolder;
+}
+
+.cardPhoto {
+  height: 160px;
+  width: 200px;
+  margin-top: 0px;
+  border-radius: 13px;
+}
+.ul {
+  font-size: 16px;
+  text-align: center;
+  font-weight: bolder;
+  color: white;
+}
+
+.carouselMe {
+  height: 500px;
+  width: 800px;
+}
+
+.item {
+  height: 1200px;
+}
+
+#photo1 {
+  height: 500px;
+  width: 1200px;
+}
+
+#photo2 {
+  height: 500px;
+  width: 1200px;
+}
+
+#photo3 {
+  height: 500px;
+  width: 1200px;
+}
+
+.dropdownME {
+  height: 300px;
+  width: 1550px;
+  background-color: rgba(48, 45, 66, 0.918);
+  display: flex;
+}
+
+.FirstItemInDropDown {
+  height: 500px;
+  width: 100px;
+  padding-left: 50px;
+}
+
+.proccesor {
+  font-size: 20px;
+  font-weight: bolder;
+}
+.font0 {
+  font-size: 20px;
+  font-weight: bolder;
+  color: snow;
+  text-decoration: none;
+  padding-top: 0px;
+}
+
+.font0:hover {
+  color: snow;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.liImage {
+  height: 100px;
+}
+
+.CpuCooler {
+  margin-left: 300px;
+  margin-top: -100px;
+}
+
+.liImage2 {
+  height: 100px;
+}
+
+#navbarNavDropdown {
+  margin-left: -20px;
+}
+
+.VideoCard {
+  margin-left: 360px;
+  margin-top: -100px;
+}
+.active {
+  font-weight: bolder;
+}
+
+.active0 {
+  margin-left: 0px;
+  padding: 15px;
+}
+
+.active0:hover {
+  background-color: rgba(255, 255, 255, 0.205);
+  transition: all 0.3s ease;
+}
+
+.liImage3 {
+  height: 100px;
+}
+
+.MotherBoard {
+  margin-left: 300px;
+  margin-top: -260px;
+}
+
+.liImage4 {
+  height: 100px;
+}
+
+.PowerSupply {
+  margin-left: 300px;
+  margin-top: 57px;
+}
+
+.liImage5 {
+  height: 100px;
+}
+
+.Memory {
+  margin-left: 700px;
+  margin-top: -255px;
+}
+
+.liImage6 {
+  height: 100px;
+}
+
+.Case {
+  margin-left: 700px;
+  margin-top: 50px;
+}
+
+.liImage7 {
+  height: 100px;
+}
+
+.Adds {
+  margin-left: 1000px;
+  margin-top: -235px;
+}
+
+#prebuilt {
+  color: snow;
+  font-size: 20px;
+  font-weight: bolder;
+  margin-top: 470px;
+  margin-left: 50px;
+  background-color: rgb(60, 42, 92);
+  border-radius: 12px;
+  padding: 10px;
+  text-decoration: none;
+  width: 500px;
+  text-align: center;
+}
+
+#prebuilt:hover {
+  text-decoration: none;
+  color: snow;
+  opacity: 1000px;
+  background-color: teal;
+  -webkit-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+  transform: scale(1.3);
+  transition: all 0.3s ease;
+}
+
+.fotDiv {
+  display: flex;
+}
+
+.forInsta {
+  width: 50px;
+  height: 50px;
+  margin-left: -150px;
+  margin-top: 140px;
+  border-radius: 10px;
+}
+
+.fotSnap {
+  width: 50px;
+  height: 50px;
+  margin-left: -80px;
+  margin-top: 140px;
+  border-radius: 10px;
+}
+
+.fotTwitter {
+  width: 50px;
+  height: 50px;
+  margin-left: -10px;
+  margin-top: 140px;
+  border-radius: 10px;
+}
+
+.socialsFot {
+  font-weight: bolder;
+  font-size: 20px;
+  color: snow;
+  text-align: center;
+  margin-left: 800px;
+  margin-top: 30px;
+  background-color: grey;
+  max-height: 40px;
+  border-radius: 10px;
+  width: 100px;
+}
+
+.dropdown-menu {
+  overflow: hidden;
+}
+/* ########################################################################################
+
+###########################################################################################*/
+#titleImg {
+  height: 50px;
+  width: 10px;
+}
+
+#title {
+  font-size: 50px;
+  color: white;
+  text-align: center;
+  padding-top: 20px;
+  padding-left: 430px;
+}
+
+.header {
+  background-color: rgba(48, 45, 66, 0.918);
+  min-height: 200px;
+  max-height: 200px;
+  display: flex;
+  color: white;
+}
+
+/* ########################################################
+v################################v##########################
+############################################################ */
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+a.sticky {
+  position: -webkit-fixed;
+  position: fixed;
+  top: 850;
+  right: 20px;
+  background-color: rgba(255, 255, 0, 0.911);
+  padding: 20px;
+  font-size: 20px;
+  border-radius: 80px;
+}
+
+.sticky:hover {
+  background-color: green;
+}
+
+/* ########################################################
+###########################################################
+########################################################### */
+
+.homePage {
+  color: white;
+  font-weight: bolder;
+  font-size: 20px;
+  padding-top: 100px;
+  padding-left: 100px;
+  text-decoration: none;
+}
+
+.homePage2 {
+  color: white;
+  font-weight: bolder;
+  font-size: 20px;
+  padding-top: 100px;
+  padding-left: 100px;
+  margin-left: -50px;
+  text-decoration: none;
+}
+
+.homePage:hover {
+  color: white;
+}
+
+.homePage2:hover {
+  color: white;
+}
+
+/* #################################################
+                      SIDE BAR
+########################################################*/
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 4%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {
+    font-size: 20px;
+  }
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+.myEditSideBar {
+  padding-top: 200px;
+}
+
+/* ########################################################
+
+                         DROP DOWN
+########################################################### */
+
+#userName {
+  color: white;
+  margin-top: -40px;
+  margin-left: -150px;
+  font-weight: bolder;
+  font-size: 30px;
+}

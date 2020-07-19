@@ -1,0 +1,73 @@
+.par22 {
+  font-size: 40px;
+  text-align: center;
+  font-weight: bold;
+  color: rgb(251, 251, 251);
+}
+
+.header1 {
+  background-color: rgb(70, 83, 107);
+  padding-bottom: 15px;
+  padding-top: 15px;
+  margin: -20px;
+}
+
+body {
+  background-image: url(../photossss/bg.png);
+  background-repeat: no-repeat;
+  background-size: 1900px;
+}
+
+.img {
+  margin-top: 80px;
+  margin-left: 40px;
+  border-radius: 10px;
+  width: 370px;
+  height: 370px;
+}
+
+.PcName {
+  font-size: 40px;
+  font-weight: bolder;
+  margin-left: 800px;
+  margin-top: -310px;
+}
+.Avalibilty {
+  margin-left: 800px;
+  margin-top: 100px;
+  font-size: 28px;
+  font-weight: bolder;
+}
+
+.Price {
+  margin-left: 880px;
+  margin-top: 100px;
+  font-size: 28px;
+  font-weight: bolder;
+}
+
+.infos {
+  text-align: left;
+  margin-top: 20px;
+  font-size: 28px;
+  font-weight: bolder;
+}
+
+.quick {
+  text-align: left;
+  margin-top: 50px;
+  font-size: 28px;
+  font-weight: bolder;
+}
+
+.buy {
+  margin-left: 920px;
+  margin-top: 100px;
+  font-size: 28px;
+  font-weight: bolder;
+  background-color: rgb(39, 171, 223);
+  max-width: 60px;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+}

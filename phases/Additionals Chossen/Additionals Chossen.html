@@ -1,0 +1,130 @@
+<html>
+  <head>
+    <title>Choose a Additionals - كمبيوترك</title>
+    <link
+      rel="stylesheet"
+      href="../Additionals Chossen/Additionals Chossen.css"
+    />
+    <link rel="stylesheet" href="../CpucoolerChossen/CpucoolerChossen.css">
+  </head>
+  <body onload="myFunction()" style="margin: 0;">
+    <div id="loader"></div>
+    <div style="display: none;" id="myDiv" class="animate-bottom">
+
+
+    <div class="header1">
+      <p align="center" class="par22">
+        Chosse a Additionals / اختر الاضافات
+      </p>
+    </div>
+
+    <div class="headerNamesOfCom">
+      <p id="nameOfCpu">
+        Name/الاسم
+      </p>
+
+      <p id="Core"></p>
+
+      <p class="selction"></p>
+
+      <p class="price">
+        Price/السعر
+      </p>
+    </div>
+
+    <hr />
+     
+          <div class="bg">
+          <div class="nameOfPart">
+            <a href="" id="addsName">
+              <img
+                src="https://quadrastores.com/uploads/product_image/product_3933_1_thumb.jpg"
+                class="cpuPhoto"
+              />
+              Ducky One 2 Mini RGB Gaming Keyboard
+            </a>
+            <a
+              href="../Seystem Bulider.html"
+              id="cpu"
+              class="cpu2"
+              onclick="Addadds(document.getElementById('addsName').innerHTML, document.getElementById('addsPrice').innerHTML)"
+            >
+              + اضافة/add
+            </a>
+          </div>
+
+          <div class="bigDiv">
+            <div>
+              <p id="coreCount"></p>
+            </div>
+            <div>
+              <p id="boostClock"></p>
+            </div>
+
+            <div class="flexx">
+              <div class="symbolEu">KD</div>
+              <p class="cpuPrice" id="addsPrice">34</p>
+            </div>
+          </div>
+    </div>
+    <hr />
+
+   
+    <div class="bg">
+    <div class="nameOfPart">
+      <a href="" id="addsName2">
+        <img
+          src="https://quadrastores.com/uploads/product_image/product_3505_1_thumb.jpg"
+          class="cpuPhoto"
+        />
+        DXRACER CHAIR FORMULA BLACK/ORANGE
+      </a>
+      <a
+        href="../Seystem Bulider.html"
+        id="cpu"
+        class="cpu2"
+        onclick="Addadds(document.getElementById('addsName2').innerHTML, document.getElementById('addsPrice2').innerHTML)"
+      >
+        + اضافة/add
+      </a>
+    </div>
+
+    <div class="bigDiv">
+      <div>
+        <p id="coreCount"></p>
+      </div>
+      <div>
+        <p id="boostClock"></p>
+      </div>
+
+      <div class="flexx">
+        <div class="symbolEu">KD</div>
+        <p class="cpuPrice" id="addsPrice2">87</p>
+      </div>
+    </div>
+  </div>
+    <hr />
+
+    <script>
+      let myVar;
+
+      function myFunction() {
+        myVar = setTimeout(showPage, 950);
+      }
+
+      function showPage() {
+        document.getElementById("loader").style.display = "none";
+        document.getElementById("myDiv").style.display = "block";
+      }
+
+      function Addadds(name, price) {
+        localStorage.setItem("AddsName00", name);
+        localStorage.setItem("AddsPrice00", price);
+      }
+
+
+
+
+    </script>
+  </body>
+</html>

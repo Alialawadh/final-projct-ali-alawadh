@@ -1,0 +1,265 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  font-family: sans-serif;
+  background-image: url(../photos/bg.png);
+  background-repeat: no-repeat;
+  background-size: 1900px;
+}
+
+.box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 25rem;
+  padding: 2.5rem;
+  box-sizing: border-box;
+  border: 1px solid #dadce0;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+}
+
+.box h2 {
+  margin: 0px 0 -0.125rem;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+  color: #202124;
+  font-family: "Google Sans", "Noto Sans Myanmar UI", arial, sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.box p {
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.1px;
+  line-height: 1.5;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.box .inputBox {
+  position: relative;
+}
+
+.box .inputBox input {
+  width: 93%;
+  padding: 0.625rem 10px;
+  font-size: 1rem;
+  letter-spacing: 0.062rem;
+  margin-bottom: 1.875rem;
+  border: 1px solid #ccc;
+  background: transparent;
+  border-radius: 4px;
+}
+
+.box .inputBox label {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  padding: 0.625rem 0;
+  font-size: 1rem;
+  color: grey;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.box .inputBox input:focus ~ label,
+.box .inputBox input:valid ~ label,
+.box .inputBox input:not([value=""]) ~ label {
+  top: -1.125rem;
+  left: 10px;
+  color: #1a73e8;
+  font-size: 0.75rem;
+  background-color: white;
+  height: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.box .inputBox input:focus {
+  outline: none;
+  border: 2px solid #1a73e8;
+}
+.box input[type="submit"] {
+  border: none;
+  outline: none;
+  color: #fff;
+  background-color: #1a73e8;
+  padding: 0.625rem 1.25rem;
+  cursor: pointer;
+  border-radius: 0.312rem;
+  font-size: 1rem;
+  float: right;
+}
+
+.box input[type="submit"]:hover {
+  background-color: #287ae6;
+  box-shadow: 0 1px 1px 0 rgba(66, 133, 244, 0.45),
+    0 1px 3px 1px rgba(66, 133, 244, 0.3);
+}
+
+.box .inputBox input:focus ~ label,
+.box .inputBox input:valid ~ label,
+.box .inputBox input:not([value=""]) ~ label {
+  top: -1.125rem;
+  left: 10px;
+  color: #1a73e8;
+  font-size: 0.75rem;
+  background-color: white;
+  height: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.box .inputBox input:focus {
+  outline: none;
+  border: 2px solid #1a73e8;
+}
+
+#head {
+  background-color: rgb(50, 76, 77);
+  padding: 10px;
+  margin-top: 0px;
+  color: white;
+}
+
+.w3-container {
+  margin-top: 100px;
+  margin-left: 300px;
+  margin-right: 300px;
+}
+
+#w3-bar-item {
+  text-align: right;
+  font-weight: bolder;
+}
+
+.massage {
+  text-align: center;
+}
+
+#myContainer {
+  padding: 100px;
+  margin-left: 400px;
+  margin-right: 700px;
+}
+
+#send {
+  width: 50;
+  font-weight: bolder;
+  background-color: rgb(40, 153, 68);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.w3-card-4 {
+  border-radius: 20px;
+}
+
+.w3-ul {
+  margin-left: 400px;
+  margin-right: 400px;
+}
+
+.sendingInputs {
+  margin-top: -50px;
+  margin-left: -20px;
+}
+
+.name {
+  margin-left: 20px;
+}
+
+#name {
+  color: green;
+  font-weight: bolder;
+}
+
+.w3-card-1 {
+  margin-left: 150px;
+  list-style: none;
+  font-weight: bolder;
+  width: 500px;
+}
+
+.img {
+  margin-left: -40px;
+}
+
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s;
+}
+
+@-webkit-keyframes animatebottom {
+  from {
+    bottom: -100px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0px;
+    opacity: 1;
+  }
+}
+
+@keyframes animatebottom {
+  from {
+    bottom: -100px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+
+#myDiv {
+  display: none;
+  text-align: center;
+}
+
+#massageHere {
+  width: 500px;
+  border-radius: 10px;
+}

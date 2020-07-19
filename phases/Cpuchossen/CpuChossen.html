@@ -1,0 +1,131 @@
+<html>
+  <head>
+    <title>Choose a cpu - كمبيوترك</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../Cpuchossen/CpuChossen.css" />
+  </head>
+  <body onload="myFunction()" style="margin: 0;">
+    <div id="loader"></div>
+    <div style="display: none;" id="myDiv" class="animate-bottom">
+      <div class="header1">
+        <p align="center" class="par22">Chosse a cpu / اختر معالج</p>
+      </div>
+
+      <div class="headerNamesOfCom">
+        <p id="nameOfCpu">
+          Name/الاسم
+        </p>
+
+        <p id="Core">
+          عدد الأنويه /core count
+        </p>
+
+        <p class="selction">
+          core clock
+        </p>
+
+        <p class="price">
+          Price/السعر
+        </p>
+      </div>
+
+      <hr />
+      <div data-aos="flip-left">
+      <div class="bg">
+        <div class="nameOfPart">
+          <a
+            href="https://de.pcpartpicker.com/product/28qhP6/intel-core-i5-9600k-37ghz-6-core-processor-bx80684i59600k"
+            id="cpuName1"
+          >
+            <img
+              src="https://cdn.pcpartpicker.com/static/forever/images/product/33f96aec821c5c10f4b1fd636a7d1881.256p.jpg"
+              class="cpuPhoto"
+            />
+            Intel Core i5-9600K 3.7 GHz 6-Core Processor
+          </a>
+
+
+          <a
+            href="../Seystem Bulider.html"
+            id="cpu"
+            class="cpu2"
+            onclick="AddCpu(document.getElementById('cpuName1').innerHTML, document.getElementById('price1').innerHTML)"
+          >
+            + اضافة/add
+          </a>
+        </div>
+
+        <div class="bigDiv">
+          <div>
+            <p id="coreCount">6</p>
+          </div>
+          <div>
+            <p id="boostClock">3,7GHz</p>
+          </div>
+
+          <div class="flexx">
+            <div class="symbolEu">$</div>
+            <p class="cpuPrice" id="price1">208</p>
+          </div>
+        </div>
+      </div>
+    </div>
+      <hr />
+
+    <div class="bg">
+      <div class="nameOfPart">
+        <a
+          href="https://de.pcpartpicker.com/product/28qhP6/intel-core-i5-9600k-37ghz-6-core-processor-bx80684i59600k"
+          id="cpuName2"
+        >
+          <img
+            src="https://cdn.pcpartpicker.com/static/forever/images/product/3760e89d1820da393f084e2c18a62e3b.256p.jpg"
+            class="cpuPhoto"
+          />
+          Intel Core i7-9700K 3.6 GHz 8-Core Processor
+        </a>
+        <a
+          href="../Seystem Bulider.html"
+          id="cpu"
+          class="cpu2"
+          onclick="AddCpu(document.getElementById('cpuName2').innerHTML, document.getElementById('CpuPrice2').innerHTML)"
+        >
+          + اضافة/add
+        </a>
+      </div>
+
+      <div class="bigDiv">
+        <div>
+          <p id="coreCount">8</p>
+        </div>
+        <div>
+          <p id="boostClock">4.9GHz</p>
+        </div>
+
+        <div class="flexx">
+          <div class="symbolEu">$</div>
+          <p class="cpuPrice" id="CpuPrice2">373</p>
+        </div>
+      </div>
+      <hr />
+    </div>
+    <script>
+      let myVar;
+
+      function myFunction() {
+        myVar = setTimeout(showPage, 950);
+      }
+
+      function showPage() {
+        document.getElementById("loader").style.display = "none";
+        document.getElementById("myDiv").style.display = "block";
+      }
+
+      function AddCpu(name, price) {
+        localStorage.setItem("cpuName00", name);
+        localStorage.setItem("cpuPrice", price);
+        console.log(name);
+      }
+    </script>
+  </body>
+</html>
